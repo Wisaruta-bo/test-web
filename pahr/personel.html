@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>บุคลากร | งานพยาบาลผู้ป่วยนอก</title>
+  <meta name="description" content="หน้าบุคลากรของงานพยาบาลผู้ป่วยนอก สำหรับเพิ่มรูปภาพและข้อมูลเจ้าหน้าที่ของหน่วยงาน" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../assets/css/style.css"/>
+  <style>
+    /* Google Fonts */
+    body {
+      font-family: 'Sarabun', sans-serif;
+      margin:0;
+      padding:0;
+      background:#f4f4f9;
+      color:#333;
+    }
+
+    /* Header */
+    .site-header {
+      background:#fff;
+      border-bottom:1px solid #e0e0e0;
+      padding:20px 0;
+      position: sticky;
+      top:0;
+      z-index: 10;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .site-header .brand {
+      display:flex;
+      align-items:center;
+      text-decoration:none;
+      color:#333;
+    }
+    .site-header .brand-mark {
+      font-size:2rem;
+      margin-right:10px;
+      color:#e66684;
+    }
+    .site-nav ul {
+      list-style:none;
+      display:flex;
+      gap:25px;
+    }
+    .site-nav ul li a {
+      text-decoration:none;
+      color:#333;
+      font-weight:500;
+      transition:0.3s;
+    }
+    .site-nav ul li a:hover {
+      color:#e66684;
+    }
+
+    /* Sections */
+    .section {
+      padding:80px 0;
+    }
+    .section-alt {
+      background:#f9f9fb;
+    }
+    .section-heading h1,
+    .section-heading h2 {
+      margin-bottom:20px;
+      text-align:center;
+      color:#222;
+    }
+    .section-heading p {
+      text-align:center;
+      color:#666;
+      font-size:1rem;
+    }
+
+    /* Person Card */
+    .person-card {
+      background:#fff;
+      border-radius:20px;
+      padding:25px;
+      text-align:center;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      transition:0.4s;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+    }
+    .person-card:hover {
+      transform: translateY(-10px);
+      box-shadow:0 15px 40px rgba(0,0,0,0.15);
+    }
+
+    /* Person Photo - Portrait */
+    .person-photo {
+      width:160px;
+      height:220px;
+      object-fit:cover;
+      border-radius:16px;
+      margin-bottom:15px;
+      display:block;
+      border: 3px solid #e66684;
+      box-shadow:0 6px 20px rgba(0,0,0,0.1);
+    }
+    .leader-photo {
+      width:220px;
+      height:300px;
+    }
+
+    /* Leader */
+    .leader-wrapper {
+      display:flex;
+      justify-content:center;
+    }
+
+    /* Nurse Grid */
+    .nurse-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:30px;
+      justify-items:center;
+    }
+
+    /* Placeholder */
+    .placeholder-photo {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#ddd;
+      color:#aaa;
+      font-size:3rem;
+    }
+
+    /* Role */
+    .person-role {
+      font-weight:600;
+      color:#e66684;
+      margin-bottom:10px;
+    }
+
+    /* Contact */
+    .person-contact a {
+      display:block;
+      font-size:0.9rem;
+      color:#555;
+      margin:5px 0;
+      text-decoration:none;
+      transition:0.3s;
+    }
+    .person-contact a:hover {
+      color:#e66684;
+    }
+
+    /* Footer */
+    .site-footer {
+      background:#222;
+      color:#fff;
+      padding:40px 0;
+      text-align:center;
+      font-size:0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width:768px) {
+      .site-nav ul {
+        flex-direction:column;
+        gap:10px;
+      }
+      .person-photo {
+        width:140px;
+        height:200px;
+      }
+    }
+
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+  </style>
+</head>
+
+<body>
+<a class="skip-link" href="#main-content">ข้ามไปยังเนื้อหาหลัก</a>
+
+<header class="site-header">
+  <div class="container header-inner" style="display:flex; justify-content:space-between; align-items:center;">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"><i class="fa-solid fa-heart-pulse"></i></span>
+      <span class="brand-text">
+        <strong>OPD Nursing</strong>
+        <small>หน้าบุคลากร</small>
+      </span>
+    </a>
+
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">หน้าแรก</a></li>
+        <li><a href="#leader-section">หัวหน้าหน่วยงาน</a></li>
+        <li><a href="#nurse-section">บุคลากร</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- HERO -->
+  <section class="section personnel-hero">
+    <div class="container">
+      <div class="section-heading">
+        <h1>บุคลากรงานพยาบาลผู้ป่วยนอก</h1>
+        <p>แสดงข้อมูลหัวหน้าและทีมงานอย่างเป็นระเบียบ</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- หัวหน้าหน่วยงาน -->
+  <section id="leader-section" class="section section-alt">
+    <div class="container">
+      <h2>หัวหน้าหน่วยงาน</h2>
+      <div class="leader-wrapper">
+        <div class="person-card leader-card">
+          <img src="../assets/img/IMG_8080.jpg" class="person-photo leader-photo" alt="นางสาวนันทยา กลางหมู่"/>
+          <h3>นางสาวนันทยา กลางหมู่</h3>
+          <p class="person-role">หัวหน้าพยาบาลผู้ป่วยวิกฤติ</p>
+          <div class="person-contact">
+            <a href="tel:054466666"><i class="fa-solid fa-phone"></i> 0 5446 6666 ต่อ 7288</a>
+            <a href="mailto:Nantaya.kl@up.ac.th"><i class="fa-solid fa-envelope"></i> Nantaya.kl@up.ac.th</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- บุคลากรพยาบาล -->
+  <section id="nurse-section" class="section">
+    <div class="container">
+      <h2>พยาบาลและบุคลากรท่านอื่น</h2>
+      <p>สามารถเพิ่มหรือลบการ์ดได้ตามจำนวนจริงของหน่วยงาน</p>
+
+      <div class="nurse-grid">
+        <!-- ตัวอย่างบุคลากร 01 -->
+        <div class="person-card nurse-card">
+          <img src="../assets/img/IMG_7504.jpg" class="person-photo nurse-photo" alt="นางสาวสมฤดี ประกอบกิจ"/>
+          <h3>นางสาวสมฤดี ประกอบกิจ</h3>
+          <p class="person-role">พยาบาลวิชาชีพ</p>
+          <div class="person-contact">
+            <a href="tel:0812345678"><i class="fa-solid fa-phone"></i> 081-234-5678</a>
+            <a href="mailto:nurse01@up.ac.th"><i class="fa-solid fa-envelope"></i> somrudee.pr@up.ac.th</a>
+          </div>
+        </div>
+
+        <!-- ตัวอย่างบุคลากร 02 -->
+        <div class="person-card nurse-card">
+          <img src="../assets/img/IMG_9386.jpg" class="person-photo nurse-photo" alt="นางสาวกนกวรรณ เบ็ญชา"/>
+          <h3>นางสาวกนกวรรณ เบ็ญชา</h3>
+          <p class="person-role">พยาบาลวิชาชีพ</p>
+          <div class="person-contact">
+            <a href="tel:0823456789"><i class="fa-solid fa-phone"></i> 082-345-6789</a>
+            <a href="mailto:nurse02@up.ac.th"><i class="fa-solid fa-envelope"></i> nurse02@up.ac.th</a>
+          </div>
+        </div>
+
+     <!-- ตัวอย่างบุคลากร 03 -->
+        <div class="person-card nurse-card">
+          <img src="../assets/img/IMG_7513.jpg" class="person-photo nurse-photo" alt="นางสาวชนากานต์ น้ำพี้"/>
+          <h3>นางสาวชนากานต์ น้ำพี้</h3>
+          <p class="person-role">พยาบาลวิชาชีพ</p>
+          <div class="person-contact">
+            <a href="tel:0823456789"><i class="fa-solid fa-phone"></i> 082-345-6789</a>
+            <a href="mailto:nurse02@up.ac.th"><i class="fa-solid fa-envelope"></i> nurse02@up.ac.th</a>
+          </div>
+        </div>
+
+        <!-- ตัวอย่างบุคลากร placeholder -->
+        <div class="person-card nurse-card">
+          <img src="../assets/img/IMG_7452.jpg" class="person-photo nurse-photo" alt="นางสาวชนากานต์ น้ำพี้"/>
+          <h3>นางสาวณัฐฐินันท์ ชัยวรรณ</h3>
+          <p class="person-role">พยาบาลวิชาชีพ</p>
+          <div class="person-contact">
+            <a href="tel:0823456789"><i class="fa-solid fa-phone"></i> 082-345-6789</a>
+            <a href="mailto:nurse02@up.ac.th"><i class="fa-solid fa-envelope"></i> nurse02@up.ac.th</a>
+          </div>
+        </div>
+
+        <div class="person-card nurse-card">
+          <div class="person-photo placeholder-photo nurse-photo">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <h3>บุคลากร 04</h3>
+          <p class="person-role">ผู้ช่วยพยาบาล</p>
+        </div>
+
+        <div class="person-card nurse-card">
+          <div class="person-photo placeholder-photo nurse-photo">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <h3>บุคลากร 05</h3>
+          <p class="person-role">เจ้าหน้าที่ธุรการ</p>
+        </div>
+
+        <div class="person-card nurse-card">
+          <div class="person-photo placeholder-photo nurse-photo">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <h3>บุคลากร 06</h3>
+          <p class="person-role">เจ้าหน้าที่สนับสนุน</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2026 OPD Nursing | หน้าเว็บบุคลากร</p>
+  </div>
+</footer>
+
+</body>
+</html>
